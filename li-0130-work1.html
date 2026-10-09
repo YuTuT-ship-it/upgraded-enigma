@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李晓东 | 个人介绍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                        accent: '#38bdf8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-gradient {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .card-shadow {
+                box-shadow: 0 10px 40px rgba(56, 189, 248, 0.1);
+            }
+        }
+        body {
+            background: radial-gradient(circle at top, #162540, #0f172a);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-200 font-sans py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+        <!-- 头部 -->
+        <header class="text-center mb-12 animate-fade-in">
+            <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-accent/50 mb-6 shadow-lg shadow-sky-500/20">
+                <!-- 替换src为你的头像图片链接 -->
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=lixiaodong" alt="李晓东头像" class="w-full h-full object-cover bg-card">
+            </div>
+            <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold bg-gradient-to-r from-sky-400 to-cyan-300 text-gradient">
+                李晓东
+            </h1>
+            <p class="mt-2 text-gray-400 text-lg">山东师范大学 · 2501级 | 编程爱好者</p>
+        </header>
+
+        <!-- 信息卡片 -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- 基础信息 -->
+            <div class="bg-card rounded-2xl p-6 card-shadow hover:shadow-sky-500/20 transition-all duration-300 hover:-translate-y-1">
+                <h2 class="text-xl font-semibold text-accent mb-4 flex items-center">
+                    <i class="fa fa-user-circle mr-2"></i>个人信息
+                </h2>
+                <ul class="space-y-3 text-gray-300">
+                    <li><span class="text-gray-400">姓名：</span>李晓东</li>
+                    <li><span class="text-gray-400">学校：</span>山东师范大学</li>
+                    <li><span class="text-gray-400">年级：</span>2501级</li>
+                    <li><span class="text-gray-400">简介：</span>热爱代码，喜欢探索新技术，享受把想法变成程序的过程，持续学习，乐于尝试。</li>
+                </ul>
+            </div>
+
+            <!-- 编程软件&技能 -->
+            <div class="bg-card rounded-2xl p-6 card-shadow hover:shadow-sky-500/20 transition-all duration-300 hover:-translate-y-1">
+                <h2 class="text-xl font-semibold text-accent mb-4 flex items-center">
+                    <i class="fa fa-code mr-2"></i>编程工具
+                </h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-3 py-2 bg-dark rounded-lg border border-sky-500/30">VS Code</span>
+                    <span class="px-3 py-2 bg-dark rounded-lg border border-sky-500/30">IDEA</span>
+                    <span class="px-3 py-2 bg-dark rounded-lg border border-sky-500/30">PyCharm</span>
+                    <span class="px-3 py-2 bg-dark rounded-lg border border-sky-500/30">Git</span>
+                    <span class="px-3 py-2 bg-dark rounded-lg border border-sky-500/30">Figma</span>
+                </div>
+                <p class="mt-4 text-gray-400 text-sm">常用语言：Python / HTML / CSS / JavaScript</p>
+            </div>
+
+            <!-- 爱好 -->
+            <div class="bg-card rounded-2xl p-6 card-shadow hover:shadow-sky-500/20 transition-all duration-300 hover:-translate-y-1 md:col-span-2">
+                <h2 class="text-xl font-semibold text-accent mb-4 flex items-center">
+                    <i class="fa fa-heart mr-2"></i>爱好
+                </h2>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-dark p-4 rounded-xl text-center">
+                        <i class="fa fa-laptop text-2xl text-sky-400 mb-2"></i>
+                        <p>编程开发</p>
+                    </div>
+                    <div class="bg-dark p-4 rounded-xl text-center">
+                        <i class="fa fa-book text-2xl text-sky-400 mb-2"></i>
+                        <p>阅读技术书籍</p>
+                    </div>
+                    <div class="bg-dark p-4 rounded-xl text-center">
+                        <i class="fa fa-gamepad text-2xl text-sky-400 mb-2"></i>
+                        <p>游戏/数码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>© 2026 李晓东 | Made with ❤️ & Code</p>
+        </footer>
+    </div>
+</body>
+</html>
